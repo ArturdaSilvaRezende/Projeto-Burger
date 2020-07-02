@@ -62,7 +62,9 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-content: center;
-    background-color: var(--dark);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
 }
 
 .header-area > .btn-menu {

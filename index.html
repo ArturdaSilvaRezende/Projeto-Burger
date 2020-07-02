@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+
     <title>Projeto Burger</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,17 +12,18 @@
 
     <!-- custom style -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
 
     <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 
+    <!-- fontes icon -->
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="node_modules/icofont/icofont.min.css">
+
     <!-- google fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap">
-
-    <!-- font awesome -->
-    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link rel="stylesheet" href="node_modules/icofont/icofont.min.css">
 
 </head>
 <body>
@@ -65,7 +67,19 @@
             </div>
         </div>
 
-    </header>
+    </header><!-- header -->
+
+    <section id="slider" class="slider">
+        <img src="img/banner/banner.png" alt="banner propaganda 01">
+        <img src="img/banner/banner2.png" alt="banner propaganda 02">
+        <img src="img/banner/banner.png" alt="banner propaganda 01">
+        <img src="img/banner/banner2.png" alt="banner propaganda 02">
+        <div class="bullets-silder"></div>
+        <div class="buttons-control">
+            <button id="prev-slider"><i class="fas fa-angle-left"></i></button>
+            <button id="next-slider"><i class="fas fa-angle-right"></i></button>
+        </div>
+    </section>
 
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="js/main.js"></script>
