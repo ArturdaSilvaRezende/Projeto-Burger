@@ -184,9 +184,67 @@
 
         $(document).scroll(debounce(function () {
             animaScroll();
-            console.log('teste')
         }, 200))
 
     })
+
+})();
+
+//A estrutura abaixo faz o controle da animação do best selling hamburgers 
+
+(()=> {
+
+    $(document).ready(function() {
+
+        const best_selling_burger = $('.burger');
+
+        best_selling_burger.mouseenter(function() {
+            $(this).addClass('best-selling-burger')
+        })
+
+        best_selling_burger.mouseleave(function() {
+            if($(this).addClass('best-selling-burger')) {
+                $(this).removeClass('best-selling-burger')
+            }
+        })
+    })
+
+})();
+
+//A estrutura abaixo faz o cotrole da animação do texto sobre do about area
+
+(()=>{
+
+    $(document).ready(function(){
+        
+        const about_area = $('.about-area');
+        const about_content = $('.about-content');
+        const x = window.matchMedia("(max-width: 992px)");
+        
+        about_area.mouseenter(function() {
+            aboutShow();
+        });
+
+        about_area.mouseleave(function() {
+            aboutHide();
+        })
+
+        function aboutShow() {
+            if ($(window).width() <= 992) { 
+                about_content.fadeIn(1000);
+            } else {
+                about_content.css('display', 'block');
+            }
+        }
+
+        function aboutHide() {
+            if ($(window).width() <= 992) { 
+                about_content.fadeOut(1000);
+            } else {
+                about_content.css('display', 'block');
+            }
+        }
+
+    });
 
 })();

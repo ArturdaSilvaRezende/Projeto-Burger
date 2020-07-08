@@ -52,7 +52,8 @@ a {
 
 html, body {
     height: 100%;
-    overflow-x: none;
+    background: url('../img/banner/bg-menu.jpg') 100% 100%;
+    background-size: cover;
 }
 
 /* ============== header ============== */
@@ -220,9 +221,9 @@ html, body {
     }
     /* navbar */
     .header-area>.navbar-main {
-        background-color: var(--light);
+        background-color: var(--dark);
         padding: 10px;
-        width: 100%;
+        width: 100vw;
         margin: 5% 0px 0px -10px;
         display: none;
         position: absolute;
@@ -242,7 +243,7 @@ html, body {
         margin: 20px 0;
     }
     .header-area>.navbar-main ul li a {
-        color: var(--dark);
+        color: var(--light);
     }
     /* redes sociais */
     .header-area>.contato-area {
@@ -291,15 +292,15 @@ html, body {
 
 .area-menu .container-itens {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 4%;
     padding-bottom: 20px;
 }
 
-.area-menu .container-itens .item-menu img{
-  position: relative;
-  left: 34%;
-  width: 200px;
+.area-menu .container-itens .item-menu img {
+    position: relative;
+    left: 28%;
+    width: 200px;
 }
 
 .area-menu .container-itens .item-menu {
@@ -332,9 +333,18 @@ html, body {
     color: var(--orange);
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .area-menu .container-itens .item-menu img {
+        position: relative;
+        left: 20%;
+        width: 200px;
+    }
+}
+
+@media screen and (min-width: 618px) and (max-width: 992px) {
     /* area menu */
     .area-menu .container-itens {
+        grid-template-columns: repeat(2, 1fr);
         margin-top: 5%;
     }
     .area-menu .container-itens .item-menu {
@@ -344,11 +354,13 @@ html, body {
         margin-bottom: 40px;
     }
     .area-menu .container-itens .item-menu img {
-        margin-right: 70%;
+        position: relative;
+        left: 1%;
+        width: 200px;
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 617px) {
     /* area menu */
     .area-menu .container-itens {
         grid-template-columns: 1fr;
@@ -361,7 +373,9 @@ html, body {
         margin-bottom: 40px;
     }
     .area-menu .container-itens .item-menu img {
-        margin-right: 70%;
+        position: relative;
+        left: 1%;
+        width: 200px;
     }
     .area-menu .container-itens .item-menu .description p {
         font-size: 1.4em;
@@ -382,4 +396,261 @@ html, body {
 .anime-start {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+}
+
+/* ============== best selling hamburgers ============== */
+
+.mais-vendidos {
+    display: flex;
+    overflow: hidden;
+}
+
+.mais-vendidos>.burger {
+    position: relative;
+}
+
+.mais-vendidos>.burger img {
+    width: 100%;
+    display: block;
+}
+
+.mais-vendidos>.burger .description-item {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.mais-vendidos>.burger .description-item div {
+    position: relative;
+    top: 20%;
+    left: 10%;
+}
+
+.mais-vendidos>.burger .description-item span {
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 2em;
+    display: block;
+}
+
+.mais-vendidos>.burger .description-item h2 {
+    color: var(--light);
+    font-weight: bold;
+    font-size: 2.5em;
+    margin: 20px 0;
+}
+
+.mais-vendidos>.burger .description-item p {
+    color: var(--light);
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.mais-vendidos>.burger .description-item button {
+    width: 150px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--indigo);
+    color: var(--light);
+    font-weight: 600;
+    cursor: pointer;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.mais-vendidos>.burger .description-item button:hover {
+    background-color: transparent;
+    border: 1px solid var(--light);
+    color: var(--yellow);
+}
+
+@media screen and (max-width: 992px) {
+    .mais-vendidos {
+        display: flex;
+        flex-direction: column;
+    }
+    .mais-vendidos>.burger {
+        margin-bottom: 25px;
+    }
+    .mais-vendidos>.burger .description-item div {
+        position: relative;
+        top: 6%;
+        left: 9%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mais-vendidos>.burger .description-item div h2 {
+        font-size: 1.4em;
+    }
+    .mais-vendidos>.burger .description-item div p {
+        width: 340px;
+    }
+}
+
+/* best selling hamburgers jquery */
+
+.best-selling-burger {
+    transform: scale(1.1, 1.1);
+    transition: 2s;
+}
+
+/* ============== about ============== */
+
+.about-area {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 15%;
+    margin: 10% auto;
+}
+
+.abount-bg {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 350px;
+}
+
+  /* authors */
+.about-area>.authors {
+    position: relative;
+}
+.about-area>.authors .author-01 {
+    max-width: 100%;
+}
+.about-area>.authors .author-02 {
+    position: absolute;
+    bottom: -20px;
+    right: -10px;
+    top: auto;
+    width: 40%;
+}
+
+ /* about-content */
+ .about-area>.about-content {
+    padding: 10%;
+    width: 100%;
+ }
+.about-area>.about-content hgroup {
+    text-align: center;
+}
+.about-area>.about-content hgroup h1 {
+    color: var(--dark);
+    font-size: 1.7em;
+}
+.about-area>.about-content hgroup h2 {
+    font-family: 'Pacifico', cursive;
+    color: var(--yellow);
+    font-size: 2.5em;
+}
+
+.about-area>.about-content div p {
+    margin: 20px 0;
+    color: var(--dark);
+    text-align: justify;
+    font-size: 20px;
+}
+
+@media screen and (min-width: 601px) and (max-width: 992px) {
+    .about-area {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    /* authors */
+    .about-area>.authors {
+        width: 100%;
+    }
+    .about-area>.authors .author-01 {
+        width: 100%;
+    }
+    .about-area>.authors .author-02 {
+        position: absolute;
+        bottom: -30px;
+        right: 0;
+        top: auto;
+        width: 300px;
+    }
+    /* about-content */
+    .about-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        padding: 0;
+        display: none;
+    }
+
+    .about-area>.about-content hgroup h1 {
+        color: var(--light);
+    }
+    .about-content div p {
+        text-align: justify;
+        font-size: 20px !important;
+        padding: 20px;
+        max-width: 90%;
+        margin: 20px auto;
+        color: var(--light) !important;
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    .about-content div img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .about-area {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    /* authors */
+    .about-area>.authors .author-02 {
+        position: absolute;
+        bottom: -30px;
+        right: 0;
+        top: auto;
+        width: 160px;
+    }
+    /* about-content */
+    .about-content {
+        position: absolute;
+        top: -40px;
+        left: -1%;
+        z-index: 5;
+        display: none;
+    }
+    .about-area>.about-content hgroup {
+        position: relative;
+        left: 0%;
+    }
+    .about-area>.about-content hgroup h1 {
+        color: var(--light);
+        font-size: 1.2em;
+    }
+    .about-area>.about-content hgroup h2 {
+        font-family: 'Pacifico', cursive;
+        color: var(--yellow);
+        font-size: 2em;
+    }
+    .about-content div p {
+        text-align: justify;
+        font-size: 14px !important;
+        padding: 20px;
+        max-width: 85;
+        margin: 20px 0;
+        color: var(--light) !important;
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    .about-content div img {
+        display: none;
+    }
 }
