@@ -507,7 +507,7 @@ html, body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 15%;
-    margin: 10% auto;
+    margin: 10% auto 15% auto;
 }
 
 .abount-bg {
@@ -654,3 +654,196 @@ html, body {
         display: none;
     }
 }
+
+/* ============== about ============== */
+
+.video-burger-area {
+    position: relative;
+    overflow-x: hidden;
+    margin-top: 10%;
+}
+
+.video-burger-area img {
+    width: 100%;
+    display: block;
+}
+
+/* video burger content */
+.video-burger-area>.bg-video-burger {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.video-burger-area>.bg-video-burger .title-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 20%;
+}
+
+.video-burger-area>.bg-video-burger .title-video h1 {
+    font-size: 3em;
+    color: var(--light);
+    width: 300px;
+    text-align: center;
+}
+
+.video-burger-area>.bg-video-burger .title-video p {
+    font-size: 1.4em;
+    color: var(--light);
+    margin: 20px 0;
+}
+
+.video-burger-area>.bg-video-burger .title-video button {
+    width: 70px;
+    height: 70px;
+    background-color: tomato;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: 0.5s ease-in;
+}
+
+.video-burger-area>.bg-video-burger .title-video button:hover {
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.video-burger-area>.video-burger-container {
+    display: none;
+}
+
+.video-burger-area>.video-burger-container video {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    transition: 1s ease-in;
+}
+
+.video-burger-area>.bg-video-burger .title-video i {
+    color: var(--light);
+    font-size: 2em;
+    margin-left: 5px;
+}
+
+.video-burger-area>.video-burger-container .btn-close-video {
+    position: absolute;
+    top: 10%;
+    right: 13%;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s ease-out;
+}
+
+.video-burger-area>.video-burger-container .btn-close-video:hover {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+@media screen and (max-width: 992px){
+    .video-burger-area>.bg-video-burger .title-video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        top: 10%;
+    }
+    .video-burger-area>.bg-video-burger .title-video h1 {
+        font-size: 2em;
+    }
+    .video-burger-area>.bg-video-burger .title-video p {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 800px) {
+    .video-burger-area>.bg-video-burger .title-video {
+        top: 20px;
+    }
+    .video-burger-area>.bg-video-burger .title-video h1 {
+        font-size: 1.7em;
+    }
+    .video-burger-area>.bg-video-burger .title-video p {
+        font-size: 1.1em;
+        margin: 10px 0;
+    }
+    .video-burger-area>.bg-video-burger .title-video button {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* ============== dedicatória ============== */
+
+.dedicatoria {
+    margin-top: 5%;
+}
+
+.dedicatoria hgroup {
+    width: 100%;
+    text-align: center;
+}
+
+.dedicatoria hgroup h2 {
+    color: var(--yellow);
+    font-family: 'Pacifico', cursive;
+    font-size: 2.2em;
+}
+
+.dedicatoria hgroup h1 {
+    font-size: 2.5em;
+}
+
+.dedicatoria .dedicatoria-content {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.dedicatoria .dedicatoria-content p {
+    color: var(--gray);
+    font-size: 1.3rem;
+    margin: 7% 0;
+    text-align: center;
+}
+
+.dedicatoria .dedicatoria-content img {
+    display: block;
+    margin: 0 auto;
+}
+
+.dedicatoria .dedicatoria-content div {
+    display: flex;
+    justify-content: center;
+}
+
+.dedicatoria .dedicatoria-content div span {
+    color: var(--yellow);
+}
+
+@media screen and (max-width: 768px){
+    dedicatoria .dedicatoria-content {
+        width: 100%;
+    }
+    .dedicatoria .dedicatoria-content p {
+        font-size: 1rem;
+    }
+}
+
