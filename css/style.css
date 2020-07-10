@@ -510,8 +510,8 @@ html, body {
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 15%;
     margin: 10% auto 15% auto;
+    width: 960px;
 }
 
 .abount-bg {
@@ -574,6 +574,7 @@ html, body {
     .about-area {
         display: grid;
         grid-template-columns: 1fr;
+        width: 100%;
     }
     /* authors */
     .about-area>.authors {
@@ -620,6 +621,7 @@ html, body {
     .about-area {
         display: grid;
         grid-template-columns: 1fr;
+        width: 100%;
     }
     /* authors */
     .about-area>.authors .author-02 {
@@ -971,4 +973,195 @@ html, body {
         width: 80%;
         height: 70%;
     }
+}
+
+/* ============== footer ============== */
+
+.footer {
+    margin-top: 5%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: #F5FBFF;
+    background-image: url(../img/banner/footer_bg.png);
+}
+
+.footer>.footer-container {
+    width: 960px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* footer content */
+.footer>.footer-container .footer-content h1{
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.footer>.footer-container .footer-content p  {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.footer>.footer-container .footer-content a {
+    color: var(--orange);
+}
+
+.footer>.footer-container .footer-content a:hover {
+    color: var(--yellow);
+}
+
+.footer>.footer-container .footer-content form {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.footer>.footer-container .footer-content form input {
+    width: 100%;
+    height: 50px;
+    background: #F5FBFF;
+    padding-left: 20px;
+    font-size: 15px;
+    color: #000;
+    border: none;
+    border: 1px solid #E8E8E8;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.footer>.footer-container .footer-content form button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    border: none;
+    color: #fff;
+    background: #F0542C;
+    padding: 10px;
+    padding: 0 22px;
+    cursor: pointer;
+    top: 5px;
+    right: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+/* footer redes sociais */
+.footer> .redes-sociais-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer> .redes-sociais-footer li {
+    display: block;
+    margin-right: 20px;
+    border: 1px dashed var(--orange);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.footer> .redes-sociais-footer li:hover {
+    border: none;
+}
+
+.footer> .redes-sociais-footer a {
+    color: var(--orange);
+    display: block;
+    transition: 0.4s ease-in;
+}
+
+.footer> .redes-sociais-footer a:hover {
+    background-color: var(--orange);
+    color: var(--light);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.footer> .redes-sociais-footer .icofont-google-plus {
+    font-size: 1.4em;
+   position: relative;
+   top: 2px;
+}
+
+/* footer copyright */
+.footer> .footer-copyright {
+    width: 80%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 3% auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer> .footer-copyright div {
+    display: flex;
+    margin: 4% 0;
+}
+
+.footer> .footer-copyright div p {
+    color: rgba(0, 0, 0, 0.3);
+    margin-right: 7px;
+}
+
+.footer> .footer-copyright div a {
+    color: var(--yellow);
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 1045px) {
+    .footer>.footer-container {
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer>.footer-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .footer>.footer-container .footer-content {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid var(--gray);
+    }
+
+    .footer>.footer-container .footer-content:last-child {
+        border-bottom: none;
+        margin-bottom: -50px;
+        padding-bottom: 0;
+    }
+
+    /* copyright */
+    .footer> .footer-copyright div  {
+        text-align: center;
+    }
+
 }

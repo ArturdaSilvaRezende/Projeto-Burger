@@ -336,3 +336,27 @@
     });
 
 })();
+
+//A estrutura abaixo faz o controle dos links clicado no nav-header
+
+(()=> {
+
+    $(document).ready(function() {
+
+        const nav_header = $('.nav-header a');
+        const body_animation = $('html, body');
+
+        nav_header.click(function(e) {
+            e.preventDefault();
+            const id_header = $(this).attr('href');
+            const targetOffset = $(id_header).offset().top;
+            //let heightHeader = $('.header-area').innerHeight();
+        
+            body_animation.animate({
+                scrollTop: targetOffset - 110
+            }, 1000);
+        })
+
+    })
+
+})();

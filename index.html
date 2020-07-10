@@ -45,13 +45,12 @@
             </button><!-- btn control menu-->
 
             <nav class="navbar-main" id="navbar-main">
-                <ul>
-                    <li><a href="" class="active">Home</a></li>
-                    <li><a href="">Menu</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Pages</a></li>
-                    <li><a href="">Contact</a></li>
+                <ul class="nav-header">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#area-menu">Menu</a></li>
+                    <li><a href="#about-area">About</a></li>
+                    <li><a href="#mais-vendidos">Blog</a></li>
+                    <li><a href="#instagram">Pages</a></li>
                 </ul>
             </nav>
 
@@ -87,7 +86,7 @@
 
     <main>
 
-        <section class="area-menu">
+        <section class="area-menu" id="area-menu">
             <hgroup class="scroll-anime">
                 <h2>Burger Menu</h2>
                 <h1>BEST EVER BURGERS</h1>
@@ -171,7 +170,7 @@
 
         </section><!-- area menu -->
 
-        <section class="mais-vendidos">
+        <section class="mais-vendidos" id="mais-vendidos">
 
             <div class="burger">
                 <img src="img/burgers/1.png" alt="the burger president">
@@ -199,7 +198,7 @@
 
         </section><!-- best selling hamburgers -->
 
-        <section class="about-area">
+        <section class="about-area" id="about-area">
 
             <div class="authors">
                 <img class="author-01" src="img/about/1.png" alt="author-01">
@@ -278,11 +277,11 @@
 
         </section><!-- dedicatória -->
 
-        <section class="instagram">
+        <section class="instagram" id="instagram">
 
             <div class="instagram-item instagram-01">
                 <img src="img/instragram/1.png" alt="instragram-img-01">
-                
+
                 <div class="instagram-area item-01">
                     <a href="#">
                         <i class="icofont-instagram"></i>
@@ -348,16 +347,54 @@
 
     </main><!-- main content -->
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-content">
+                <h1>New York</h1>
+                <p>5th flora, 700/D kings road,</p>
+                <p>green lane New York-1782</p>
+                <p>info@burger.com</p>
+                <a href="#">+10 378 483 6782</a>
+            </div>
+
+            <div class="footer-content">
+                <h1>California</h1>
+                <p>5th flora, 700/D kings road,</p>
+                <p>green lane New York-1782</p>
+                <p>info@burger.com</p>
+                <a href="#">+10 378 483 6782</a>
+            </div>
+
+            <div class="footer-content">
+                <h1>Stay Connected</h1>
+
+                <form>
+                    <input type="email" maxlength="100" placeholder="Enter Your Email">
+                    <button>Sign Up</button>
+                </form>
+
+                <p>Stay connect with us to get exclusive offer!</p>
+            </div>
+
+        </div><!-- footer content -->
+
+        <ul class="redes-sociais-footer">
+            <li><a href="#"><i class="icofont-instagram"></i></a></li>
+            <li><a href="#"><i class="icofont-twitter"></i></a></li>
+            <li><a href="#"><i class="icofont-facebook"></i></a></li>
+            <li><a href="#"><i class="icofont-google-plus"></i></a></li>
+        </ul><!-- footer redes sociais -->
+
+        <div class="footer-copyright">
+            <div>
+                <p>Copyright ©2020 All rights reserved | This template is made with by<a href="#">Colorlib</a></p>
+            </div>
+        </div>
+
+    </footer><!-- rodapé -->
+
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="js/main.js"></script>
 </body>
