@@ -156,7 +156,7 @@
     };
 
     $(document).ready(function () {
-
+        
         let target = $(".scroll-anime");
 
         //fórmula offset, onde ele vai pegar o tamanho da janela e nunca vai deixar mais do que 3/4 da janela em branco, vai ser um valor dinâmico
@@ -219,7 +219,6 @@
         
         const about_area = $('.about-area');
         const about_content = $('.about-content');
-        const x = window.matchMedia("(max-width: 992px)");
         
         about_area.mouseenter(function() {
             aboutShow();
@@ -238,7 +237,11 @@
         function aboutHide() {
             if ($(window).width() <= 992) { 
                 about_content.fadeOut(1000);
-            } else {
+            } 
+        }
+
+        window.onresize = function () {
+            if ($(window).width() > 992) {
                 about_content.css('display', 'block');
             }
         }
@@ -269,4 +272,67 @@
        
     })
   
+})();
+
+//A estrutura abaixo controla o show e hide do insagram área
+
+(()=> {
+
+    $(document).ready(function() {
+        
+        /* instagram área 01 */
+        const btn_show_01 = $('#show-insta-01');
+        const btn_hide_01 = $('#hide-insta-01')
+        const instagram_area_01 = $('.item-01');
+
+        btn_show_01.click(function() {
+            instagram_area_01.fadeIn(1000);
+        })
+
+        btn_hide_01.click(function() {
+            instagram_area_01.fadeOut(1000);
+        })
+
+         /* instagram área 02 */
+         const btn_show_02 = $('#show-insta-02');
+         const btn_hide_02 = $('#hide-insta-02')
+         const instagram_area_02 = $('.item-02');
+ 
+         btn_show_02.click(function() {
+             instagram_area_02.fadeIn(1000);
+         })
+ 
+         btn_hide_02.click(function() {
+             instagram_area_02.fadeOut(1000);
+         })
+
+          /* instagram área 03 */
+          const btn_show_03 = $('#show-insta-03');
+          const btn_hide_03 = $('#hide-insta-03')
+          const instagram_area_03 = $('.item-03');
+  
+          btn_show_03.click(function() {
+              instagram_area_03.fadeIn(1000);
+          })
+  
+          btn_hide_03.click(function() {
+              instagram_area_03.fadeOut(1000);
+          })
+
+
+         /* instagram área 04 */
+         const btn_show_04 = $('#show-insta-04');
+         const btn_hide_04 = $('#hide-insta-04')
+         const instagram_area_04 = $('.item-04');
+ 
+         btn_show_04.click(function() {
+             instagram_area_04.fadeIn(1000);
+         })
+ 
+         btn_hide_04.click(function() {
+             instagram_area_04.fadeOut(1000);
+         })
+
+    });
+
 })();

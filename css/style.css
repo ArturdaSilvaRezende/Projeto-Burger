@@ -497,6 +497,10 @@ html, body {
 
 .best-selling-burger {
     transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
     transition: 2s;
 }
 
@@ -519,13 +523,16 @@ html, body {
     height: 350px;
 }
 
-  /* authors */
+/* authors */
+
 .about-area>.authors {
     position: relative;
 }
+
 .about-area>.authors .author-01 {
     max-width: 100%;
 }
+
 .about-area>.authors .author-02 {
     position: absolute;
     bottom: -20px;
@@ -534,18 +541,22 @@ html, body {
     width: 40%;
 }
 
- /* about-content */
- .about-area>.about-content {
+/* about-content */
+
+.about-area>.about-content {
     padding: 10%;
     width: 100%;
- }
+}
+
 .about-area>.about-content hgroup {
     text-align: center;
 }
+
 .about-area>.about-content hgroup h1 {
     color: var(--dark);
     font-size: 1.7em;
 }
+
 .about-area>.about-content hgroup h2 {
     font-family: 'Pacifico', cursive;
     color: var(--yellow);
@@ -587,7 +598,6 @@ html, body {
         padding: 0;
         display: none;
     }
-
     .about-area>.about-content hgroup h1 {
         color: var(--light);
     }
@@ -669,6 +679,7 @@ html, body {
 }
 
 /* video burger content */
+
 .video-burger-area>.bg-video-burger {
     position: absolute;
     left: 0;
@@ -746,9 +757,13 @@ html, body {
     right: 13%;
     padding: 10px;
     border: none;
-    border-radius: 50%;
     cursor: pointer;
     transition: 1s ease-out;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .video-burger-area>.video-burger-container .btn-close-video:hover {
@@ -757,7 +772,7 @@ html, body {
     color: #fff;
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 992px) {
     .video-burger-area>.bg-video-burger .title-video {
         display: flex;
         justify-content: center;
@@ -838,7 +853,7 @@ html, body {
     color: var(--yellow);
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     dedicatoria .dedicatoria-content {
         width: 100%;
     }
@@ -847,3 +862,113 @@ html, body {
     }
 }
 
+/* ============== intagram ============== */
+
+.instagram {
+    margin: 7% auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 960px;
+    gap: 30px;
+}
+
+.instagram>.instagram-item {
+    position: relative;
+}
+
+.instagram img {
+    display: block;
+    width: 100%;
+}
+
+.instagram .show-instagram, .instagram .hide-instagram {
+    cursor: pointer;
+    border: 1px solid var(--light);
+    width: 40px;
+    background-color: var(--dark);
+}
+
+.instagram>.instagram-item .btn-control-insta {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.instagram>.instagram-item .btn-control-insta button {
+    margin-right: 10px;
+    padding: 5px;
+    transition: 0.5s ease-in;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.instagram>.instagram-item .btn-control-insta button:hover {
+    background-color: var(--yellow);
+}
+
+.instagram .btn-control-insta i {
+    color: var(--light);
+    font-size: 15pt;
+}
+
+.instagram>.instagram-item .instagram-area {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    border: 2px dashed var(--light);
+    width: 80%;
+    height: 70%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.instagram>.instagram-item .instagram-area i {
+    position: relative;
+    top: 43%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    font-size: 1.6em;
+    color: var(--light);
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+    .instagram {
+        width: 100%;
+        grid-template-columns: repeat(2, 35%);
+        justify-content: center;
+    }
+    .instagram>.instagram-item .instagram-area {
+        position: absolute;
+        top: 5%;
+        left: 8%;
+        width: 85%;
+        height: 75%;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 799px) {
+    .instagram {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+    .instagram .instagram-item .instagram-area img {
+        max-width: 100%;
+    }
+    .instagram>.instagram-item .instagram-area {
+        position: absolute;
+        top: 5.5%;
+        left: 10%;
+        width: 80%;
+        height: 70%;
+    }
+}
