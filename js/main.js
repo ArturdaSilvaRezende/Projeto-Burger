@@ -5,8 +5,6 @@
 
 "use strict";
 
-
-
 //A estrutura abaixo faz o controle do show e hide do navbar-header
 (() => {
 

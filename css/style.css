@@ -812,6 +812,9 @@ html, body {
 
 .dedicatoria {
     margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 .dedicatoria hgroup {
@@ -830,8 +833,24 @@ html, body {
 }
 
 .dedicatoria .dedicatoria-content {
+    margin: 5% auto 3% auto;
+    display: flex;
+    justify-content: center;
+}
+
+.dedicatoria .dedicatoria-content .dedicatoria-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-start;
+    width: 40%;
+    margin-top: -30px;
+}
+
+.dedicatoria .dedicatoria-content #mapa {
+    align-self: flex-end;
     width: 50%;
-    margin: 0 auto;
+    height: 300px;
 }
 
 .dedicatoria .dedicatoria-content p {
@@ -839,6 +858,7 @@ html, body {
     font-size: 1.3rem;
     margin: 7% 0;
     text-align: center;
+   
 }
 
 .dedicatoria .dedicatoria-content img {
@@ -856,11 +876,26 @@ html, body {
 }
 
 @media screen and (max-width: 768px) {
-    dedicatoria .dedicatoria-content {
+   
+    .dedicatoria .dedicatoria-content {
+        flex-direction: column;
+        margin-top: -10px;
+    }
+    .dedicatoria .dedicatoria-content .dedicatoria-description {
+        margin: 0 auto 5% auto;
         width: 100%;
     }
+    .mapouter {
+        margin: 0 auto;
+    }
     .dedicatoria .dedicatoria-content p {
+        width: 100%;
+        padding: 0 20px;
         font-size: 1rem;
+    }
+
+    .dedicatoria .dedicatoria-content #mapa {
+        width: 100%;
     }
 }
 
@@ -985,6 +1020,8 @@ html, body {
     background-size: cover;
     background: #F5FBFF;
     background-image: url(../img/banner/footer_bg.png);
+    position: relative;
+    padding-bottom: 10%;
 }
 
 .footer>.footer-container {
@@ -1065,6 +1102,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 5%;
 }
 
 .footer> .redes-sociais-footer li {
@@ -1117,6 +1155,10 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .footer> .footer-copyright div {
@@ -1142,6 +1184,9 @@ html, body {
 }
 
 @media screen and (max-width: 767px) {
+    .footer {
+        padding-bottom: 10%;
+    }
     .footer>.footer-container {
         flex-direction: column;
         width: 100%;
@@ -1159,7 +1204,14 @@ html, body {
         padding-bottom: 0;
     }
 
+    .footer> .redes-sociais-footer {
+        padding-bottom: 20%;
+    }
+
     /* copyright */
+    .footer> .footer-copyright {
+        bottom: 25px;
+    }
     .footer> .footer-copyright div  {
         text-align: center;
     }
