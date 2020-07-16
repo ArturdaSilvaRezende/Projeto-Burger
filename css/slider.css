@@ -20,7 +20,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-40%);
-    bottom: 10px;
+    bottom: 20px;
     z-index: 3;
 }
 
@@ -66,4 +66,19 @@
 
 .buttons-control button:hover i {
     color: #fff;
+}
+
+@media screen and (max-width: 992px) {
+    .slider {
+        max-height: 80%;
+    }
+
+    .slider > .bullets-silder {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        bottom: 20px;
+        z-index: 3;
+        width: 100%;
+    }
 }

@@ -209,45 +209,6 @@
 
 })();
 
-//A estrutura abaixo faz o cotrole da animação do texto sobre do about area
-
-(()=>{
-
-    $(document).ready(function(){
-        
-        const about_area = $('.about-area');
-        const about_content = $('.about-content');
-        
-        about_area.mouseenter(function() {
-            aboutShow();
-        });
-
-        about_area.mouseleave(function() {
-            aboutHide();
-        })
-
-        function aboutShow() {
-            if ($(window).width() <= 992) { 
-                about_content.fadeIn(1000);
-            }
-        }
-
-        function aboutHide() {
-            if ($(window).width() <= 992) { 
-                about_content.fadeOut(1000);
-            } 
-        }
-
-        window.onresize = function () {
-            if ($(window).width() > 992) {
-                about_content.css('display', 'block');
-            }
-        }
-
-    });
-
-})();
-
 //A estrutura abaixo controla o show e hide do video burger
 
 (()=> {
