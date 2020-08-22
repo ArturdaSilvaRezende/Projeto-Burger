@@ -18,6 +18,10 @@ a {
     text-decoration: none;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 /* variáveis */
 
 :root {
@@ -217,7 +221,7 @@ html, body {
         color: var(--light);
         cursor: pointer;
         order: 3;
-        padding-right: 10%;
+        padding-right: 4%;
     }
     .header-area>.btn-menu i {
         border: 2px solid var(--light);
@@ -238,11 +242,11 @@ html, body {
     .header-area>.navbar-main {
         background-color: var(--dark);
         padding: 10px;
-        width: 100vw;
-        margin: 5% 0px 0px -10px;
+        width: 100%;
+        margin: 5% 0px 0px 0;
         display: none;
         position: absolute;
-        top: 80px;
+        top: 60px;
         z-index: 999;
     }
     .header-area>.navbar-main ul {
@@ -264,8 +268,11 @@ html, body {
     .header-area>.contato-area {
         order: 2;
     }
+    .header-area>.contato-area .redes-sociais {
+        margin-left: -10px;
+    }
     .header-area>.contato-area .redes-sociais li {
-        margin-right: 15px;
+        margin-right: 10px;
     }
     
     .header-area>.contato-area .redes-sociais li a i {
@@ -274,9 +281,6 @@ html, body {
 }
 
 @media screen and (min-width: 993px) and (max-width: 1200px) {
-    .header-area {
-        overflow-x: hidden;
-    }
     .header-area>.contato-area {
         margin-right: -15%;
     }
@@ -286,10 +290,6 @@ html, body {
 }
 
 /* ============== menu area ============== */
-
-.area-menu {
-    overflow-x: hidden;
-}
 
 /* hgroup area */
 
@@ -311,7 +311,6 @@ html, body {
 }
 
 /* area menu */
-
 .area-menu .container-itens {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -363,7 +362,7 @@ html, body {
     }
 }
 
-@media screen and (min-width: 618px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
     /* area menu */
     .area-menu .container-itens {
         grid-template-columns: repeat(2, 1fr);
@@ -382,10 +381,10 @@ html, body {
     }
 }
 
-@media screen and (max-width: 617px) {
+@media screen and (max-width: 767px) {
     /* area menu */
     .area-menu .container-itens {
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
         margin-top: 30px;
     }
     .area-menu .container-itens .item-menu {
@@ -404,6 +403,10 @@ html, body {
     }
     .area-menu .container-itens .item-menu:last-child {
         margin-bottom: 0;
+    }
+
+    .area-menu hgroup h1,  .area-menu hgroup h2{
+        font-size: 20pt;
     }
 }
 
@@ -424,7 +427,7 @@ html, body {
 
 .mais-vendidos {
     display: flex;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .mais-vendidos>.burger {
@@ -494,7 +497,7 @@ html, body {
 @media screen and (max-width: 992px) {
     .mais-vendidos {
        flex-direction: column;
-       max-width: 70%;
+       width: 70%;
        margin: 0 auto;
     }
    
@@ -510,23 +513,38 @@ html, body {
 
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 767px) {
     .mais-vendidos {
         flex-direction: column;
-        max-width: 100%;
+        width: 100%;
         position: relative;
      }
     .mais-vendidos>.burger .description-item div h2 {
         font-size: 1.1em;
     }
     .mais-vendidos>.burger .description-item div p {
-        width: 300px;
-        font-size: 1em;
+        width: 250px;
+        font-size: 14px;
     }
     .mais-vendidos>.burger .description-item div button {
         position: absolute;
         top: 10px;
         right: 50px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .mais-vendidos {
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1367px) {
+    .mais-vendidos .burger {
+        margin-bottom: 40px;
+
     }
 }
 
@@ -601,7 +619,7 @@ html, body {
 @media screen and (min-width: 768px) and (max-width: 992px) {
     .about-area {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
         margin: 30px auto;
         width: 100%;
     }
@@ -636,9 +654,8 @@ html, body {
 
 @media screen and (max-width: 767px) {
     .about-area {
-        display: grid;
-        grid-template-columns: 1fr;
-        max-width: 80%;
+        grid-template-columns: 100%;
+        width: 80%;
     }
     /* authors */
     .about-area>.authors {
@@ -685,7 +702,6 @@ html, body {
 
 .video-burger-area {
     position: relative;
-    overflow-x: hidden;
     margin-top: 7%;
 }
 
@@ -805,7 +821,15 @@ html, body {
     }
 }
 
-@media screen and (min-width: 400px) and (max-width: 800px) {
+@media screen and (max-width: 800px) {
+    .video-burger-area {
+        height: 200px;
+    }
+
+    .video-burger-area img {
+        width: 100%;
+        height: 100%;
+    }
     .video-burger-area>.bg-video-burger .title-video {
         top: 20px;
     }
@@ -888,7 +912,7 @@ html, body {
     color: var(--yellow);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .dedicatoria .dedicatoria-content {
         flex-direction: column;
         margin-top: -10px;
@@ -910,6 +934,23 @@ html, body {
     }
 }
 
+@media screen and (min-width: 768px) and (max-width:1024px) {
+
+    .dedicatoria .dedicatoria-content {
+        flex-direction: column;
+    }
+
+    .dedicatoria .dedicatoria-content .dedicatoria-description {
+        margin: 0 auto 5% auto;
+        width: 80%;
+    }
+
+    .dedicatoria .dedicatoria-content #mapa {
+        width: 100%;
+    }
+
+}
+
 /* ============== intagram ============== */
 
 .instagram {
@@ -917,12 +958,11 @@ html, body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 960px;
-    gap: 30px;
-    overflow-x: hidden;
 }
 
 .instagram>.instagram-item {
     position: relative;
+    margin-right: 20px;
 }
 
 .instagram img {
@@ -988,30 +1028,16 @@ html, body {
     color: var(--light);
 }
 
-@media screen and (min-width: 800px) and (max-width: 1000px) {
+@media screen and (max-width: 767px) {
     .instagram {
         width: 100%;
-        grid-template-columns: repeat(2, 35%);
-        justify-content: center;
+        grid-template-columns: 100%;
     }
-    .instagram>.instagram-item .instagram-area {
-        position: absolute;
-        top: 5%;
-        left: 8%;
-        width: 85%;
-        height: 75%;
+    .instagram .instagram-item {
+        margin: 0 auto 20px auto;
     }
-}
-
-@media screen and (min-width: 300px) and (max-width: 799px) {
-    .instagram {
+    .instagram .instagram-item img {
         width: 100%;
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-        justify-content: center;
-    }
-    .instagram .instagram-item .instagram-area img {
-        max-width: 100%;
     }
     .instagram>.instagram-item .instagram-area {
         position: absolute;
@@ -1020,6 +1046,18 @@ html, body {
         width: 80%;
         height: 70%;
     }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+     .instagram {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .instagram .instagram-item {
+        margin: 0 auto 20px auto;
+    }
+
 }
 
 /* ============== footer ============== */
@@ -1116,7 +1154,6 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 5%;
 }
 
 .footer>.redes-sociais-footer li {
@@ -1199,12 +1236,9 @@ html, body {
 }
 
 @media screen and (max-width: 767px) {
-    .footer {
-        padding-bottom: 10%;
-    }
+
     .footer>.footer-container {
         flex-direction: column;
-        width: 100%;
     }
     .footer>.footer-container .footer-content {
         margin-bottom: 20px;
@@ -1217,11 +1251,11 @@ html, body {
         padding-bottom: 0;
     }
     .footer>.redes-sociais-footer {
-        padding-bottom: 20%;
+        padding-bottom: 22%;
     }
     /* copyright */
     .footer>.footer-copyright {
-        bottom: 25px;
+        bottom: 10px;
     }
     .footer>.footer-copyright div {
         text-align: center;
