@@ -2,12 +2,14 @@
   "name": "Projeto-Burger",
   "version": "1.1.2",
   "description": "![portifolio-04](https://user-images.githubusercontent.com/61878023/90961264-02ab1480-e47e-11ea-88f7-a4f3d9ddbede.PNG)",
-  "main": "index.js",
+  "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
     "jquery": "^3.5.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.26.13",
@@ -23,7 +25,8 @@
     "node-sass": "^5.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
