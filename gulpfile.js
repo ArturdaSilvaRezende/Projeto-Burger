@@ -51,6 +51,10 @@ function clear() {
   return del("./dist");
 }
 
+function clearApp() {
+  return del("./src/js/app.min.js")
+}
+
 //task js
 function js() {
   if (isPro) {
@@ -98,12 +102,14 @@ function prod(cb) {
   cb();
 }
 
+//task dev
 function dev(cb) {
   isPro = false;
   cb();
 }
 
 module.exports.default = gulp.series(
+  clearApp,
   dev,
   clear,
   gulp.parallel(html, js, sass, images),
