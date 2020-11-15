@@ -1,0 +1,135 @@
+@import "reset";
+
+.mais-vendidos {
+    display: flex;
+    overflow: hidden;
+
+    .burger {
+        position: relative;
+
+        img {
+            width: 100%;
+            display: block;
+        }
+        
+        .description-item {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+
+            div {
+                position: relative;
+                top: 20%;
+                left: 10%;
+            }
+
+            span {
+                color: var(--orange);
+                font-weight: bold;
+                font-size: 2em;
+                display: block;
+            }
+
+            h2 {
+                color: var(--light);
+                font-weight: bold;
+                font-size: 2.5em;
+                margin: 20px 0;
+            }
+
+            p {
+                color: var(--light);
+                font-size: 1em;
+                margin-bottom: 20px;
+            }
+
+            button {
+                width: 150px;
+                padding: 10px;
+                border-radius: 20px;
+                border: none;
+                background-color: var(--indigo);
+                color: var(--light);
+                font-weight: 600;
+                cursor: pointer;
+                @include borderRadius(20px);
+
+                &:hover {
+                    background-color: transparent;
+                    border: 1px solid var(--light);
+                    color: var(--yellow);
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+
+    .mais-vendidos {
+        flex-direction: column;
+        width: 70%;
+        margin: 0 auto;
+
+        .burger {
+            margin-bottom: 25px;
+
+            .description-item {
+
+                div {
+                    position: relative;
+                    top: 6%;
+                    left: 9%;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .mais-vendidos {
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+
+        .burger {
+
+            .description-item {
+
+                div {
+                    h2 {
+                        font-size: 1.1em;
+                    }
+                    p {
+                        width: 250px;
+                        font-size: 14px;
+                    }
+                    button {
+                        position: absolute;
+                        top: 10px;
+                        right: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .mais-vendidos {
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1367px) {
+    .mais-vendidos .burger {
+        margin-bottom: 40px;
+    }
+}

@@ -503,7 +503,6 @@ html, body {
    
     .mais-vendidos>.burger {
         margin-bottom: 25px;
-
     }
     .mais-vendidos>.burger .description-item div {
         position: relative;
@@ -544,7 +543,6 @@ html, body {
 @media screen and (min-width: 1024px) and (max-width: 1367px) {
     .mais-vendidos .burger {
         margin-bottom: 40px;
-
     }
 }
 

@@ -1,0 +1,145 @@
+.about-area {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10% auto -20px auto;
+    width: 960px;
+
+    .authors {
+        position: relative;
+
+        .author-01 {
+            max-width: 100%;
+        }
+
+        .author-02 {
+            position: absolute;
+            bottom: -20px;
+            right: -10px;
+            top: auto;
+            width: 50%;
+        }
+    }
+
+    .about-content {
+        padding: 5% 4% 0 4%;
+        width: 100%;
+
+        hgroup {
+            text-align: center;
+
+            h1 {
+                color: var(--dark);
+                font-size: 1.7em;
+            }
+
+            h2 {
+                font-family: 'Pacifico', cursive;
+                color: var(--yellow);
+                font-size: 2.5em;
+            }
+        }
+
+        div {
+            p {
+                margin: 20px 0;
+                color: var(--dark);
+                text-align: center;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    .about-area {
+        display: grid;
+        grid-template-columns: 100%;
+        margin: 30px auto;
+        width: 100%;
+
+        .authors {
+            display: flex;
+            margin: 0 auto;
+
+            .author-01 {
+                max-width: 300px;
+            }
+
+            .author-02 {
+                max-width: 300px;
+                position: relative;
+            }
+        }
+
+        .about-content {
+
+            hgroup {
+
+                h1 {
+                    color: var(--dark);
+                }
+            }
+
+            div  {
+                display: flex;
+                flex-direction: column;
+
+                p {
+                    text-align: center;
+                }
+
+                img {
+                    width: 20%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .about-area {
+        grid-template-columns: 100%;
+        width: 80%;
+
+        .authors {
+            display: flex;
+
+            img {
+                width: 50%;
+            }
+
+            .author-02 {
+                position: relative;
+            }
+        }
+
+        .about-content {
+            hgroup {
+
+                h2 {
+                    font-family: 'Pacifico', cursive;
+                    color: var(--yellow);
+                    font-size: 2em;
+                }
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+                margin: 0 auto;
+
+                p {
+                    font-size: 14px !important;
+                }
+
+                img {
+                    width: 40%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

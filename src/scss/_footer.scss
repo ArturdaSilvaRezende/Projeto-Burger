@@ -1,0 +1,188 @@
+@import "reset";
+
+.footer {
+    margin-top: 5%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: #F5FBFF;
+    background-image: url(../img/footer_bg.png);
+    position: relative;
+    padding-bottom: 10%;
+
+    .footer-container {
+        width: 960px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        padding: 80px 0;
+        text-align: center;
+
+        .footer-content {
+
+            h1 {
+                font-size: 1.5em;
+                font-weight: 700;
+                margin-bottom: 30px;
+            }
+
+            p {
+                margin: 10px 0;
+                font-size: 16px;
+            }
+
+            a {
+                color: var(--orange);
+                
+                &:hover {
+                    color: var(--yellow);
+                }
+            }
+
+            form {
+                margin-bottom: 40px;
+                position: relative;
+
+                input {
+                    width: 100%;
+                    height: 50px;
+                    background: #F5FBFF;
+                    padding-left: 20px;
+                    font-size: 15px;
+                    color: #000;
+                    border: none;
+                    border: 1px solid #E8E8E8;
+                    @include borderRadius(30px);
+                }
+
+                button {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 40px;
+                    border: none;
+                    color: #fff;
+                    background: #F0542C;
+                    padding: 10px;
+                    padding: 0 22px;
+                    cursor: pointer;
+                    top: 5px;
+                    right: 5px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    @include borderRadius(30px);
+                }
+            }
+        }
+    }
+
+    .redes-sociais-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li {
+            display: block;
+            margin-right: 20px;
+            border: 1px dashed var(--orange);
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+            @include borderRadius(50%);
+
+            &:hover {
+                border: none;
+            }
+
+            a {
+                color: var(--orange);
+                display: block;
+                transition: 0.4s ease-in;
+
+                &:hover {
+                    background-color: var(--orange);
+                    color: var(--light);
+                    @include borderRadius(50%);
+                }
+            }
+        }
+
+        .icofont-google-plus {
+            font-size: 1.4em;
+            position: relative;
+            top: 2px;
+        }
+    }
+
+    .footer-copyright {
+        width: 80%;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        margin: 3% auto 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        div {
+            display: flex;
+            margin: 4% 0;
+
+            p {
+                color: rgba(0, 0, 0, 0.3);
+                margin-right: 7px;
+            }
+
+            a {
+                color: var(--yellow);
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1045px) {
+    .footer>.footer-container {
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .footer {
+
+        .footer-container {
+            flex-direction: column;
+    
+            .footer-content {
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                border-bottom: 2px solid var(--gray);
+    
+                &:last-child {
+                    border-bottom: none;
+                    margin-bottom: -50px;
+                    padding-bottom: 0;
+                }
+            }
+        }
+
+        .redes-sociais-footer {
+            padding-bottom: 22%;
+        }
+
+        .footer-copyright {
+            bottom: 10px;
+            div {
+                text-align: center;
+            }
+        }
+    }
+}
