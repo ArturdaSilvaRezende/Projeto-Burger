@@ -7,6 +7,7 @@ const cssano = require("gulp-cssnano");
 const imagemin = require("gulp-imagemin");
 const uglify = require("gulp-uglify");
 const babel = require("gulp-babel");
+const usemin = require("gulp-usemin");
 const browsersync = require("browser-sync").create();
 
 //task server
@@ -19,6 +20,7 @@ function server() {
     .on("change", browsersync.reload);
   gulp.watch("./src/**/*.html").on("change", browsersync.reload);
   gulp.watch("./src/scss/**/*.scss", sass).on("change", browsersync.reload);
+  gulp.watch("./src/img/**/*.*", images).on("change", browsersync.reload);
 }
 
 //task html
@@ -50,16 +52,22 @@ function sass() {
 function clear() {
   return del("./dist");
 }
-
 function clearApp() {
-  return del("./src/js/app.min.js")
+  return del("./src/js/**/*.min.js");
+}
+
+//task fontawesome
+function fontawesome() {
+  return gulp
+    .src("./src/assets/@fortawesome/fontawesome-free/**/*.*")
+    .pipe(gulp.dest("./dist/assets"));
 }
 
 //task js
 function js() {
   if (isPro) {
     return gulp
-      .src("./src/js/**/*.js")
+      .src(["./src/js/**/*.js"])
       .pipe(concat("app.min.js"))
       .pipe(
         babel({
@@ -76,21 +84,28 @@ function js() {
         })
       )
       .pipe(uglify())
-      .pipe(gulp.dest("./src/js"));
+      .pipe(gulp.dest("./dist/js"));
   }
 
   return gulp
-    .src("./src/js/**/*.js")
+    .src(["./src/js/**/*.js"])
     .pipe(sourcemap.init())
     .pipe(concat("app.min.js"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("./src/js"));
 }
 
+//task jquery
+function jquery() {
+  return gulp
+    .src("./src/assets/js/**/*.js")
+    .pipe(gulp.dest("./dist/assets/js"));
+}
+
 //task image
 function images() {
   return gulp
-    .src(".src/img/**/*.*")
+    .src("./src/img/**/*.*")
     .pipe(imagemin())
     .pipe(gulp.dest("./dist/img"));
 }
@@ -109,15 +124,16 @@ function dev(cb) {
 }
 
 module.exports.default = gulp.series(
+  clear,
   clearApp,
   dev,
-  clear,
-  gulp.parallel(html, js, sass, images),
+  gulp.parallel(html, js, jquery, fontawesome, sass, images),
   server
 );
 
 module.exports.build = gulp.series(
-  prod,
   clear,
-  gulp.parallel(html, js, sass, images)
+  clearApp,
+  prod,
+  gulp.parallel(html, js, jquery, fontawesome, sass, images)
 );
